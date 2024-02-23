@@ -6,14 +6,31 @@ nomElement per el elememnt
 
 h1 {
     font-size: 40px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: darkcyan;
 }
 
-.filter-button button {
-    padding: 10px 24px;
+p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.filter-button {
+    background-color: #92e3e9; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
 
 #mainIMG {
     width: 500px;
-    height: auto
+    height: auto;
+}
+
+.imgGallery {
+    width: 500px;
+    height: auto;
 }
