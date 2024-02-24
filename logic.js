@@ -49,19 +49,65 @@ function sortImagesByMedia(images, medias) {
 }
 
 let type = "asc"
-document.querySelector('#date-button').addEventListener(function() {
+document.querySelector('#date-button').addEventListener('click', function() {
     type = (type == "asc") ? "desc" : "asc"; 
-    categories = 
+    categories = "hola"
 
-    tempImages = { ... images}
+    tempImages = [ ... images]
     tempImages = sortImagesByAge(tempImages, type)
     tempImages = sortImagesByCategories(tempImages)
     tempImages = sortImagesByMedia(tempImages)
     loadImages(tempImages)
 })
 
-function main() {
-    loadImages(images);
+function createCheckBoxCategories(images) {
+    let uniqueSet = new Set()
+    images.forEach((img) => {
+        img.categories.forEach((cat) => {
+            uniqueSet.add(cat)
+        })
+    })
+    let newHTML = ''
+    uniqueSet.forEach((cat) => {
+        newHTML += `<input type="checkbox" id="checkbox${cat}" name="checkbox${cat}">`
+        newHTML += `<label for="checkbox${cat}">${cat}</label><br></br>`
+    })
+    document.querySelector('#llistaCategories').innerHTML = newHTML
 }
 
-main()
+function createCheckBoxMedias(images) {
+    let uniqueSet = new Set()
+    images.forEach((img) => {
+        img.media.forEach((med) => {
+            uniqueSet.add(med)
+        })
+    })
+    let newHTML = ''
+    uniqueSet.forEach((med) => {
+        newHTML += `<input type="checkbox" id="checkbox${med}" name="checkbox${med}">`
+        newHTML += `<label for="checkbox${med}">${med}</label><br></br>`
+    })
+    document.querySelector('#llistaMedias').innerHTML = newHTML
+}
+
+document.getElementById('mostraMedia').addEventListener('click', function() {
+    let llista = document.getElementById('llistaMedias');
+    llista.style.display = (llista.style.display === 'none') ? 'block' : 'none';
+});
+
+document.getElementById('mostraCategories').addEventListener('click', function() {
+    let llista = document.getElementById('llistaCategories');
+    llista.style.display = (llista.style.display === 'none') ? 'block' : 'none';
+});
+
+function StartUp(images) {
+    createCheckBoxCategories(images)
+    createCheckBoxMedias(images)
+    loadImages(images)
+}
+
+function main(images) {
+    StartUp(images)
+}
+
+main(images)
