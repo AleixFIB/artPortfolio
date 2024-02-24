@@ -1,10 +1,10 @@
 const images = [
     {
-    path: "",
-    name: "",
+    path: "Castell.jpg",
+    name: "castell",
     date: new Date('2024-02-23T12:00:00'),
-    categories: ["",""] ,
-    media: ["",""]
+    categories: ["Arquitectura","Fantasia"] ,
+    media: ["Llapis"]
     },
     {
     path: "",
