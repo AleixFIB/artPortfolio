@@ -4,14 +4,49 @@ const images = [
     name: "castell",
     date: new Date('2024-02-23T12:00:00'),
     categories: ["Arquitectura","Fantasia"] ,
-    media: ["Llapis"]
+    media: ["Grafit"]
     },
     {
-    path: "",
-    name: "",
+    path: "drac.jpg",
+    name: "drac",
     date: new Date('2024-03-23T12:00:00'),
-    categories: ["",""] ,
-    media: ["",""]
+    categories: ["Animals","Fantasia"] ,
+    media: ["Grafit","Llapis colors"]
+    },
+    {
+    path: "tren.jpg",
+    name: "tren1",
+    date: new Date('2022-11-27T12:00:00'),
+    categories: ["Vehicles"] ,
+    media: ["Grafit"]
+    },
+    {
+    path: "Narcisos.png",
+    name: "narcisos",
+    date: new Date('2023-03-23T12:00:00'),
+    categories: ["Flors","Natura"] ,
+    media: ["Acuarel-la","Tinta"]
+    },
+    {
+    path: "Far.png",
+    name: "far1",
+    date: new Date('2022-11-23T12:00:00'),
+    categories: ["Arquitectura","Mar"] ,
+    media: ["Tinta"]
+    },
+    {
+    path: "Far2.jpg",
+    name: "far1",
+    date: new Date('2022-12-23T12:00:00'),
+    categories: ["Arquitectura","Mar"] ,
+    media: ["Tinta"]
+    },
+    {
+    path: "Tren_cumple_papa.jpg",
+    name: "tren2",
+    date: new Date('2023-11-27T12:00:00'),
+    categories: ["Vehicles"] ,
+    media: ["Tinta"]
     }
 ]
 
